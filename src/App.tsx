@@ -1,11 +1,11 @@
 import './App.css';
-import { LoggedIn } from './state/LoggedIn';
+import { Counter } from './state/Counter';
 
 function App() {
 
   return (
     <div className="App">
-      <LoggedIn/>
+      <Counter/>
   </div>
   );
 }
