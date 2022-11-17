@@ -1,12 +1,40 @@
 import './App.css';
-import { Private } from './auth/Private';
-import { Profile } from './auth/Profile';
+import { List } from './generics/List';
 
 function App() {
 
   return (
-   <div>
-    <Private isLoggedIn={true} Component={Profile}/>
+   <div className='App'>
+    <List
+    
+      items={['Batman','Superman','Wonder Woman']}
+      onClick={(item)=>console.log(item)}
+
+    />
+    <List items={[1,2,3]} onClick={(item)=>console.log(item)}/>
+    <List
+
+    items={[
+      {
+        first:'Bruce1',
+        last:'Wayne1'
+      },
+      {
+        first:'Bruce2',
+        last:'Wayne2'
+      },
+      {
+        first:'Bruce3',
+        last:'Wayn3e'
+      },
+      {
+        first:'Bruce4',
+        last:'Wayne4'
+      }
+    ]}
+
+    onClick={(item)=>console.log(item)}
+    />
    </div>
   );
 }
